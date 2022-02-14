@@ -1,0 +1,48 @@
+.sideBarHeader {
+  padding: 25px 20px;
+  background: #ffffff;
+}
+.sideBarWrapper button {
+  border: none;
+  background: none;
+}
+.iconMenu {
+  cursor: pointer;
+}
+.sideBarContent,.sideBarContentActive {
+  background: #282833;
+  display: block;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  transition: padding-top 0.5s ease 0s, width 0.5s ease 0s;
+  transform: translate3d(0px, 0px, 0px);
+  overflow: hidden;
+  width: 0;
+}
+.sideBarContentActive {
+  overflow: initial;
+  width: 350px;
+}
+.sideBarContent ul {
+ display: none;
+}
+.sideBarContentActive ul {
+  padding: 20px 10px;
+  display: block;
+  margin: 0;
+}
+.sideBarContent,.sideBarContentActive ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 17px;
+}
+.sideBarContent,.sideBarContentActive ul li a:hover {
+  color: #E9992A;
+  transition: 0.4s ease-in;
+ 
+}
+.sideBarContentActive ul li {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

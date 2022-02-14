@@ -1,38 +1,49 @@
 .App {
-  text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todolist {
+  max-width: 900px;
+  width: 100%;
+  margin: 50px auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todolist-header {
+  font-size: 25px;
+  margin-bottom: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todolist {
+  margin: 100px auto;
 }
-
-.App-link {
-  color: #61dafb;
+table {
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  padding: 20px 10px 30px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+thead th {
+  padding: 15px;
+}
+thead .action {
+  padding-bottom: 20px;
+}
+thead button {
+  background: #adb5bd;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+tbody tr th {
+  padding: 15px;
+  font-weight: normal;
+}
+tbody tr {
+  background: #ffffff;
+}
+tbody tr:nth-child(odd) {
+  background: #f7f8fb;
+}
+tbody .active th {
+  color: #abacac;
 }
