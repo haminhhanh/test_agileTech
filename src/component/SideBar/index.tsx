@@ -12,10 +12,17 @@ function SideBar() {
     <div className="sideBarWrapper">
       <div className="sideBarHeader">
         <button onClick={onShowSideBar}>
-          <FontAwesomeIcon icon={faBars} size="lg" className="iconMenu" />
+          <FontAwesomeIcon
+            icon={faBars}
+            size="lg"
+            className="iconMenu"
+            color={isShowSideBar ? "#999e99" : "black"}
+          />
         </button>
       </div>
-      <div className={isShowSideBar?'sideBarContentActive':'sideBarContent'}>
+      <div
+        className={isShowSideBar ? "sideBarContentActive" : "sideBarContent"}
+      >
         <ul>
           <li>
             <a href="https://react-hook-form.com/">Home</a>
@@ -34,7 +41,6 @@ function SideBar() {
           </li>
         </ul>
       </div>
-      
     </div>
   );
 }
