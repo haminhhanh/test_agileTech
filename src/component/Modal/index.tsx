@@ -5,9 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { makeStyles } from "@material-ui/core/styles";
 import { useForm } from "react-hook-form";
-import userApi from "../../api/api";
+// import userApi from "../../api/api";
 
-function MuiModal() {
+interface AddProps {
+  addFn: Function;
+  total: number;
+  onSuccess: Function;
+}
+
+function MuiModal(props: AddProps) {
   const [open, setOpen] = React.useState(false);
   const classes = useStyles();
   const {
@@ -23,18 +29,23 @@ function MuiModal() {
     setOpen(false);
   };
 
-  const onSubmit = useCallback(async (value) => {
-    const res = await userApi.add({
-      email: value.Email,
-      position: value.Position,
-      phone: value.Phone,
-      username: value.Username,
-    });
+  const onSubmit = useCallback(
+    async (value) => {
+      const res = await props.addFn({
+        id: props.total + 1,
+        email: value.Email,
+        position: value.Position,
+        phone: value.Phone,
+        name: value.Username,
+      });
 
-    if (res) {
-      setOpen(false);
-    }
-  }, []);
+      if (res.success) {
+        setOpen(false);
+        props.onSuccess();
+      }
+    },
+    [props]
+  );
 
   return (
     <div className="modalWrapper">
@@ -89,7 +100,7 @@ function MuiModal() {
                 required: "This input is required",
                 pattern: {
                   value: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-                  message: "Phone email",
+                  message: "Invalid Phone",
                 },
               })}
             />
