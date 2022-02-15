@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/test_agileTech/static/css/main.0a256a90.css",
-    "main.js": "/test_agileTech/static/js/main.070ee7a2.js",
+    "main.js": "/test_agileTech/static/js/main.ff593873.js",
     "static/js/787.a9f7d69b.chunk.js": "/test_agileTech/static/js/787.a9f7d69b.chunk.js",
     "index.html": "/test_agileTech/index.html",
     "main.0a256a90.css.map": "/test_agileTech/static/css/main.0a256a90.css.map",
-    "main.070ee7a2.js.map": "/test_agileTech/static/js/main.070ee7a2.js.map",
+    "main.ff593873.js.map": "/test_agileTech/static/js/main.ff593873.js.map",
     "787.a9f7d69b.chunk.js.map": "/test_agileTech/static/js/787.a9f7d69b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a256a90.css",
-    "static/js/main.070ee7a2.js"
+    "static/js/main.ff593873.js"
   ]
 }
